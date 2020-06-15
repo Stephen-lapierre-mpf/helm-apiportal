@@ -1,0 +1,7 @@
+{{- define "dbqa.yaml" -}}
+subsets:
+ - addresses:
+     - ip: 10.149.205.82
+   ports:
+     - port: 3306
+{{- end -}}

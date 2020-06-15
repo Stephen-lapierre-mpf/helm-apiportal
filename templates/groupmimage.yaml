@@ -1,0 +1,10 @@
+{{- define "groupmimage.yaml" -}}
+      initContainers:
+        - name: init-api-portal
+          image: stephenlapierrempf/api-portal
+          volumeMounts:
+          - mountPath: /data
+            name: vol-drupal
+          command: ['/bin/bash', '-c']
+          args: ['cp -r /var/www/web/sites /data; cp -r /var/www/web/modules /data; cp -r /var/www/web/core /data; chown -R www-data:www-data /data/*']
+{{- end -}}

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-portal-map-{{ .Values.deployto.name }}
+  namespace: api-portal
+data:
+  MYDB_DATABASE: apigeeportal
+  MYDB_USER: {{ .Values.myconn.name }}
+  MYDB_PASSWORD: {{ .Values.myconn.value }}
+  MYDB_HOST: api-portal-db-extip-{{ .Values.deployto.name }}

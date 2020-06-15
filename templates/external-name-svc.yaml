@@ -1,0 +1,16 @@
+kind: "Service"
+apiVersion: "v1"
+metadata:
+  name: api-portal-db-extip-{{ .Values.deployto.name }}
+  namespace: api-portal
+spec:
+  type: ExternalName
+  {{- if eq $.Values.deployto.name "prod" }}
+  externalName: {{ .Values.extdbname.prod}}
+  {{- else if eq $.Values.deployto.name "int"}}
+  externalName: {{ .Values.extdbname.int}}
+  {{- else if eq $.Values.deployto.name "qa"}}
+  externalName: {{ .Values.extdbname.qa}}
+  {{- else if eq $.Values.deployto.name "dev"}}
+  externalName: {{ .Values.extdbname.dev}}
+  {{- end }}
