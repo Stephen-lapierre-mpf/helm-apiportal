@@ -28,22 +28,13 @@ deployto:
   name: "int"
   
 mountnfs:
-  prod: 10.60.29.138
   int: 10.149.205.82
-  qa:  10.149.205.82
-  dev: 10.149.205.82
   
 dbendpoint:
-  prod:  10.21.0.203
   int:  10.17.3.201
-  qa:  10.17.15.2
-  dev:  10.17.48.83
     
 extdbname:
-  prod: "mariadb-db-vip-na.use1.mplatform.net"
   int:  "galera-db-vip-na-int.use1.mplatform.net"
-  qa:  "galera-db-vip-na-qa.use1.mplatform.net"
-  dev: "mariadb-db-1-na-dev.use1.mplatform.net"
 
 mountImage:
   prod:  "xaxisjenkins/api-portal"
