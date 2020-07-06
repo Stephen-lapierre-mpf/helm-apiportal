@@ -8,7 +8,7 @@ apiportal is the Drupal apigee kickstart web interface.
 dev helm install --create-namespace dev-apiportal ./helm-apiportal
 qa  helm install --create-namespace qa-apiportal -f ./helm-apiportal/qa-values.yaml ./helm-apiportal
 int  helm install --create-namespace int-apiportal -f ./helm-apiportal/int-values.yaml ./helm-apiportal
-prod kubectl apply -f prod/prod-deployment.yaml
+prod helm install --create-namespace prod-apiportal -f ./helm-apiportal/prod-values.yaml ./helm-apiportal
 ```
 
 
