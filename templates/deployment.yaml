@@ -60,13 +60,13 @@ spec:
                   key: MYDB_DATABASE
             - name: MYDB_USER
               valueFrom:
-                configMapKeyRef:
-                  name: api-portal-map-{{ .Values.deployto.name }}
+                secretKeyRef:
+                  name: mariadb-secret
                   key: MYDB_USER
             - name: MYDB_PASSWORD
               valueFrom:
-                configMapKeyRef:
-                  name: api-portal-map-{{ .Values.deployto.name }}
+                secretKeyRef:
+                  name: mariadb-secret
                   key: MYDB_PASSWORD
             - name: MYDB_HOST
               valueFrom:

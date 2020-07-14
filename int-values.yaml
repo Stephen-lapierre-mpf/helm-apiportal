@@ -47,8 +47,8 @@ ingressroute:
   name: "int-apiportal.mplatform.com"
   
 myconn:
-  name: "app_appigee_user"
-  value: "ApPiGeE@UsEr123"
+  name: "YXBwX2FwcGlnZWVfdXNlcg=="
+  value: "QXBQaUdlRUBVc0VyMTIz"
 
 
 podAnnotations: {}

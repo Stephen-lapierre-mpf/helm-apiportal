@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   #repository: xaxisjenkins/api-portal
   repository: stephenlapierrempf/api-portal
-  pullPolicy: Always
+  pullPolicy: IfnotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
@@ -28,8 +28,8 @@ deployto:
   name: "qa"
 
 myconn:
-  name: "app_appigee_user"
-  value: "ApPiGeE@UsEr123"
+  name: "YXBwX2FwcGlnZWVfdXNlcg=="
+  value: "QXBQaUdlRUBVc0VyMTIz"
   
 mountnfs:
   qa:  10.149.205.82

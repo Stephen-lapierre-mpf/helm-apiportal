@@ -44,8 +44,8 @@ getsecret:
   data: "eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJ4YXhpc2plbmtpbnMiLCJwYXNzd29yZCI6ImplbmtpbnMueGF4aXMiLCJhdXRoIjoiZUdGNGFYTnFaVzVyYVc1ek9tcGxibXRwYm5NdWVHRjRhWE09In19fQ=="
     
 myconn:
-  name: "slapierre"
-  value: "DevSLaPierre2@123"
+  name: "c2xhcGllcnJl"
+  value: "RGV2U0xhUGllcnJlMkAxMjM="
 
 ingressroute:
   name: "dev-apiportal.mplatform.com"
