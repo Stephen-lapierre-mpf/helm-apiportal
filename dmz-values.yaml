@@ -45,6 +45,13 @@ getsecret:
     
 podAnnotations: {}
 
+ingressroute:
+  name: "dev-apiportal.mplatform.com"
+  
+myconn:
+  name: "YXBwX2FwcGlnZWVfdXNlcg=="
+  value: "QXBQaUdlRUBVc0VyMTIz"
+
 podSecurityContext: {}
   # fsGroup: 2000
 
