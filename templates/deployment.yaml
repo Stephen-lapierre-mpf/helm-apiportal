@@ -23,7 +23,7 @@ spec:
       containers:
         - name: api-portal
        {{- if eq $.Values.deployto.name "prod" }}
-          image: {{ .Values.mountImage.prod}}
+          image: {{ .Values.mountImage.other}}
        {{- else }}
           image: {{ .Values.mountImage.other}}
         {{- end }}
