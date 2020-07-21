@@ -11,7 +11,7 @@ spec:
     - ReadWriteMany
   storageClassName: slow
   nfs:
-    path: /export/drupal
+    path: /export/{{ .Values.deployto.name }}/drupal
     {{- if eq $.Values.deployto.name "prod" }}
     server: {{ .Values.mountnfs.prod}}
     {{- else if eq $.Values.deployto.name "int"}}
