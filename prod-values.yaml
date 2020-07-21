@@ -5,11 +5,11 @@
 replicaCount: 1
 
 image:
-  repository: xaxisjenkins/api-portal
-  # repository: stephenlapierrempf/api-portal
+  repository: xaxisjenkins/api-portal:latest
+  # repository: stephenlapierrempf/api-portal:latest
   pullPolicy: IfnotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  # tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
