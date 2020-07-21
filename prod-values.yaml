@@ -37,8 +37,8 @@ extdbname:
   prod: "mariadb-db-vip-na.use1.mplatform.net"
 
 mountImage:
-  prod:  "xaxisjenkins/api-portal"
-  other: "stephenlapierrempf/api-portal"
+  prod:  "xaxisjenkins/api-portal:latest"
+  other: "stephenlapierrempf/api-portal:latest"
   
 getsecret:
   data: "eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJ4YXhpc2plbmtpbnMiLCJwYXNzd29yZCI6ImplbmtpbnMueGF4aXMiLCJhdXRoIjoiZUdGNGFYTnFaVzVyYVc1ek9tcGxibXRwYm5NdWVHRjRhWE09In19fQ=="
