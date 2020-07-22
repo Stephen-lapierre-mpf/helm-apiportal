@@ -13,7 +13,6 @@ prod helm install --create-namespace prod-apiportal -f ./helm-apiportal/prod-val
 upgrade int helm upgrade int-apiportal -f ./helm-apiportal/int-values.yaml ./helm-apiportal
 ```
 ## Creating the secret
-The secret name is specified in deployment and must match xaxissecret.
 
 ...bash
 kubectl create secret docker-registry xaxissecret \
@@ -28,6 +27,8 @@ kubectl get secret xaxissecret --output=yaml
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+The secret name is specified in deployment and must match xaxissecret.
 
 Please make sure to update tests as appropriate.
 
