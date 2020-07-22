@@ -14,7 +14,7 @@ upgrade int helm upgrade int-apiportal -f ./helm-apiportal/int-values.yaml ./hel
 ```
 ## Creating the secret
 
-...bash
+<p><code>
 kubectl create secret docker-registry xaxissecret \
 --docker-server=https://index.docker.io/v1/ \
 --docker-username=request \
@@ -23,12 +23,12 @@ kubectl create secret docker-registry xaxissecret \
 --namespace api-portal -o yaml > xaxis-secret.yaml
 
 kubectl get secret xaxissecret --output=yaml
-...
+</code></p>
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-The secret name is specified in deployment and must match xaxissecret.
+The secret name is specified in deployment and must match **xaxissecret**.
 
 Please make sure to update tests as appropriate.
 
