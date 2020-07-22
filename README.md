@@ -14,6 +14,7 @@ upgrade int helm upgrade int-apiportal -f ./helm-apiportal/int-values.yaml ./hel
 ```
 ## Creating the secret
 The secret name is specified in deployment and must match "xaxissecret".
+
 ...bash
 kubectl create secret docker-registry xaxissecret \
 --docker-server=https://index.docker.io/v1/ \
