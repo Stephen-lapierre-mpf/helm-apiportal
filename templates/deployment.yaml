@@ -18,15 +18,11 @@ spec:
         app: api-portal-{{ .Values.deployto.name }}
     spec:
       imagePullSecrets:
-      - name: regcred
+      - name: xaxissecret
       
       containers:
         - name: api-portal
-       {{- if eq $.Values.deployto.name "prod" }}
-          image: {{ .Values.mountImage.other}}
-       {{- else }}
-          image: {{ .Values.mountImage.other}}
-        {{- end }}
+          image: {{ .Values.mountImage.prod}}
           imagePullPolicy: Always
       
           ports:
@@ -81,11 +77,7 @@ spec:
         - name: init-api-portal
       initContainers:
         - name: init-api-portal
-       {{- if eq $.Values.deployto.name "prod" }}
-          image: {{ .Values.mountImage.other}}
-       {{- else }}
-          image: {{ .Values.mountImage.other}}
-        {{- end }}
+          image: {{ .Values.mountImage.prod}}
           volumeMounts:
           - mountPath: /data
             name: vol-drupal

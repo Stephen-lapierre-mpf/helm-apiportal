@@ -12,7 +12,17 @@ prod helm install --create-namespace prod-apiportal -f ./helm-apiportal/prod-val
 
 upgrade int helm upgrade int-apiportal -f ./helm-apiportal/int-values.yaml ./helm-apiportal
 ```
+## Creating the secret
+...bash
+kubectl create secret docker-registry xaxissecret \
+--docker-server=https://index.docker.io/v1/ \
+--docker-username=xaxisjenkins \
+--docker-password=jenkins.xaxis \
+--docker-email=Markus.plattner@xaxis.com \
+--namespace api-portal -o yaml > xaxis-secret.yaml
 
+kubectl get secret xaxissecret --output=yaml
+...
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
