@@ -14,19 +14,19 @@ upgrade int helm upgrade int-apiportal -f ./helm-apiportal/int-values.yaml ./hel
 ```
 ## Creating the secret
 
-kubectl create secret docker-registry xaxissecret \
+kubectl create secret docker-registry drupalsecret \
 --docker-server=https://index.docker.io/v1/ \
 --docker-username=request \
 --docker-password=request \
 --docker-email=Markus.plattner@xaxis.com \
 --namespace api-portal -o yaml > xaxis-secret.yaml
 
-kubectl get secret xaxissecret --output=yaml
+kubectl get secret drupalsecret --output=yaml
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-The secret name is specified in deployment and must match **xaxissecret**.
+The secret name is specified in deployment and must match **drupalsecret**.
 
 Please make sure to update tests as appropriate.
 

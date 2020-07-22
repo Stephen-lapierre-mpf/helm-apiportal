@@ -18,7 +18,7 @@ spec:
         app: api-portal-{{ .Values.deployto.name }}
     spec:
       imagePullSecrets:
-      - name: xaxissecret
+      - name: drupalsecret
       
       containers:
         - name: api-portal
