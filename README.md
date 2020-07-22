@@ -16,8 +16,8 @@ upgrade int helm upgrade int-apiportal -f ./helm-apiportal/int-values.yaml ./hel
 ...bash
 kubectl create secret docker-registry xaxissecret \
 --docker-server=https://index.docker.io/v1/ \
---docker-username=<request> \
---docker-password=<request> \
+--docker-username=request \
+--docker-password=request \
 --docker-email=Markus.plattner@xaxis.com \
 --namespace api-portal -o yaml > xaxis-secret.yaml
 
