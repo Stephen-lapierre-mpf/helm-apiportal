@@ -19,12 +19,12 @@ Check for secret existence before deployment with;
 kubectl get secret drupalsecret --output=yaml
 
 
-kubectl create secret docker-registry drupalsecret \\
---docker-server=https://index.docker.io/v1/ \\
---docker-username=request \\
---docker-password=request \\
---docker-email=Markus.plattner@xaxis.com \\
---namespace api-portal -o yaml > xaxis-secret.yaml
+kubectl create secret docker-registry drupalsecret \\  
+--docker-server=https://index.docker.io/v1/ \\  
+--docker-username=request \\  
+--docker-password=request \\  
+--docker-email=Markus.plattner@xaxis.com \\  
+--namespace api-portal -o yaml > drupal-secret.yaml
 
 
 ## Contributing
