@@ -4,7 +4,11 @@ metadata:
   name: api-load-balancer-{{ .Values.deployto.name }}
   namespace: api-portal
   annotations:
+  {{- if eq $.Values.deployto.name "prod" }}
     cloud.google.com/load-balancer-type: "Internal"
+  {{- else }}
+    # external for static IP
+  {{- end }}
 spec:
   type: LoadBalancer
   selector:
