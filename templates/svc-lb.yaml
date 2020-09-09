@@ -14,3 +14,7 @@ spec:
       protocol: TCP
       port: {{ .Values.service.port }}
       targetPort: 8000
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: 8000
