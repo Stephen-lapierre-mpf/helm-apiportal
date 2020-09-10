@@ -31,6 +31,7 @@ Deployment may fail if not set correct.
 The secret name is specified in deployment and must match **drupalsecret**.
 
 To create the correct string use;
+
 kubectl create secret docker-registry drupalsecret \
 --docker-server=https://index.docker.io/v1/ \
 --docker-username=xaxisjenkins \
