@@ -40,6 +40,7 @@ mountImage:
   prod:  "xaxisjenkins/api-portal"
   other: "stephenlapierrempf/api-portal"
   
+  # auth for production repository.
 getsecret:
   data: "eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJ4YXhpc2plbmtpbnMiLCJwYXNzd29yZCI6ImplbmtpbnMueGF4aXMiLCJlbWFpbCI6Ik1hcmt1cy5wbGF0dG5lckB4YXhpcy5jb20iLCJhdXRoIjoiZUdGNGFYTnFaVzVyYVc1ek9tcGxibXRwYm5NdWVHRjRhWE09In19fQ=="
     
