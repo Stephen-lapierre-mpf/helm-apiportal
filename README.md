@@ -25,8 +25,9 @@ this would be the base64 encoded string for input;
 "email":"Markus.plattner@xaxis.com","auth":"eGF4aXNqZW5raW5zOmplbmtpbnMueGF4aXM="}}}
 
 This should be the string data for data named data for key named **getsecret** for the values file
-for the current environment. Should be set before deployments in each value file. This will
-enable the secret creation to be handled automatically. Deployment may fail if not set correct.
+for the current environment. Should be set before deployments in each value file. By default it is set to the Jenkins repo 
+so should not need editing. This will enable the secret creation to be handled automatically. 
+Deployment may fail if not set correct.
 The secret name is specified in deployment and must match **drupalsecret**.
 
 
