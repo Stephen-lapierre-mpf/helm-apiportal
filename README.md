@@ -30,6 +30,13 @@ so should not need editing. This will enable the secret creation to be handled a
 Deployment may fail if not set correct.
 The secret name is specified in deployment and must match **drupalsecret**.
 
+To create the correct string use;
+kubectl create secret docker-registry drupalsecret \
+--docker-server=https://index.docker.io/v1/ \
+--docker-username=xaxisjenkins \
+--docker-password=jenkins.xaxis \
+--docker-email=Markus.plattner@xaxis.com \
+--namespace api-portal -o yaml > docker-secret.yaml
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
