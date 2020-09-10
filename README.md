@@ -15,7 +15,7 @@ qa$  helm install --create-namespace qa-apiportal -f ./helm-apiportal/qa-values.
 int$  helm install --create-namespace int-apiportal -f ./helm-apiportal/int-values.yaml ./helm-apiportal
 prod$ helm install --create-namespace prod-apiportal -f ./helm-apiportal/prod-values.yaml ./helm-apiportal
 
-upgrade int helm upgrade int-apiportal -f ./helm-apiportal/int-values.yaml ./helm-apiportal
+upgrade int$ helm upgrade int-apiportal -f ./helm-apiportal/int-values.yaml ./helm-apiportal
 ```
 ## Creating the secret
 This is the auth for image pull repo. If this is the internal environment
@@ -26,7 +26,7 @@ this would be the base64 encoded string for input;
 
 This should be the string data for data named data for key named **getsecret** for the values file
 for the current environment. Should be set before deployments in each value file. This will
-enable the secret creation to be handled automatically.
+enable the secret creation to be handled automatically. Deployment may fail if not set correct.
 The secret name is specified in deployment and must match **drupalsecret**.
 
 
