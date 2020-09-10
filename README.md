@@ -28,15 +28,6 @@ This should be the string data for data named data for key named **getsecret** f
 for the current environment. Should be set before deployments in each value file. This will
 enable the secret creation to be handled automatically.
 The secret name is specified in deployment and must match **drupalsecret**.
-Check for secret existence before deployment with;
-kubectl get secret drupalsecret --output=yaml
-
-kubectl create secret docker-registry drupalsecret \\  
---docker-server=https://index.docker.io/v1/ \\  
---docker-username=request \\  
---docker-password=request \\  
---docker-email=Markus.plattner@xaxis.com \\  
---namespace api-portal -o yaml > drupal-secret.yaml
 
 
 ## Contributing
