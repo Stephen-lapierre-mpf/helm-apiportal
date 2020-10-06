@@ -11,11 +11,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: api-portal-{{ .Values.deployto.name }}
+      app: api-portal-{{.Values.deployto.name }}
   template:
     metadata:
       labels:
-        app: api-portal-{{ .Values.deployto.name }}
+        app: api-portal-{{.Values.deployto.name }}
     spec:
       imagePullSecrets:
       - name: drupalsecret
@@ -23,7 +23,7 @@ spec:
       containers:
         - name: api-portal
           image: {{ .Values.mountImage.prod}}
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
       
           ports:
           - containerPort: 8000
@@ -78,11 +78,6 @@ spec:
       initContainers:
         - name: init-api-portal
           image: {{ .Values.mountImage.prod}}
-          volumeMounts:
-          - mountPath: /data
-            name: vol-drupal
-          command: ['/bin/bash', '-c']
-          args: ['cp -r /var/www/web/sites /data; cp -r /var/www/web/modules /data; cp -r /var/www/web/core /data; chown -R www-data:www-data /data/*']
           volumeMounts:
           - mountPath: /data
             name: vol-drupal

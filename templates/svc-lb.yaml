@@ -4,11 +4,7 @@ metadata:
   name: api-load-balancer-{{ .Values.deployto.name }}
   namespace: api-portal
   annotations:
-  {{- if eq $.Values.deployto.name "prod" }}
     cloud.google.com/load-balancer-type: "Internal"
-  {{- else }}
-    # external for static IP
-  {{- end }}
 spec:
   type: LoadBalancer
   selector:
@@ -17,8 +13,4 @@ spec:
     - name: http
       protocol: TCP
       port: {{ .Values.service.port }}
-      targetPort: 8000
-    - name: https
-      protocol: TCP
-      port: 443
       targetPort: 8000
