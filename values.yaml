@@ -5,8 +5,6 @@
 replicaCount: 1
 
 image:
-  #repository: xaxisjenkins/api-portal
-  repository: stephenlapierrempf/api-portal
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -37,18 +35,15 @@ extdbname:
   dev: "mariadb-db-1-na-dev.use1.mplatform.net"
 
 mountImage:
-  prod:  "xaxisjenkins/api-portal"
-  other: "stephenlapierrempf/api-portal"
 
 getsecret:
-  data: "eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJ4YXhpc2plbmtpbnMiLCJwYXNzd29yZCI6ImplbmtpbnMueGF4aXMiLCJhdXRoIjoiZUdGNGFYTnFaVzVyYVc1ek9tcGxibXRwYm5NdWVHRjRhWE09In19fQ=="
+  data: "=="
     
 myconn:
-  name: "c2xhcGllcnJl"
-  value: "RGV2U0xhUGllcnJlMkAxMjM="
+  name: ""
+  value: "="
 
 ingressroute:
-  name: "dev-apiportal.mplatform.com"
   
 podAnnotations: {}
 
