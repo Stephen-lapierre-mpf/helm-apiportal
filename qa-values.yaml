@@ -5,8 +5,6 @@
 replicaCount: 1
 
 image:
-  repository: xaxisjenkins/api-portal
-  #repository: stephenlapierrempf/api-portal
   pullPolicy: IfnotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -28,8 +26,6 @@ deployto:
   name: "qa"
 
 myconn:
-  name: "YXBwX2FwcGlnZWVfdXNlcg=="
-  value: "QXBQaUdlRUBVc0VyMTIz"
   
 mountnfs:
   qa:  10.149.205.82
@@ -41,11 +37,10 @@ extdbname:
   qa:  "galera-db-vip-na-qa.use1.mplatform.net"
 
 mountImage:
-  prod:  "xaxisjenkins/api-portal"
-  other: "stephenlapierrempf/api-portal"
+  other: "/api-portal"
 
 getsecret:
-  data: "eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJ4YXhpc2plbmtpbnMiLCJwYXNzd29yZCI6ImplbmtpbnMueGF4aXMiLCJlbWFpbCI6Ik1hcmt1cy5wbGF0dG5lckB4YXhpcy5jb20iLCJhdXRoIjoiZUdGNGFYTnFaVzVyYVc1ek9tcGxibXRwYm5NdWVHRjRhWE09In19fQ=="
+  data: "=="
     
 ingressroute:
   name: "qa-apiportal.mplatform.com"
