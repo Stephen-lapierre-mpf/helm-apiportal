@@ -32,7 +32,6 @@ dbendpoint:
   dev:  10.17.48.83
     
 extdbname:
-  dev: "mariadb-db-1-na-dev.use1.mplatform.net"
 
 mountImage:
 
