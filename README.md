@@ -21,8 +21,8 @@ upgrade int$ helm upgrade int-apiportal -f ./helm-apiportal/int-values.yaml ./he
 This is the auth for image pull repo. If this is the internal environment
 this would be the base64 encoded string for input;
 
-{"auths":{"https://index.docker.io/v1/":{"username":"xaxisjenkins","password":"jenkins.xaxis",
-"email":"Markus.plattner@xaxis.com","auth":"eGF4aXNqZW5raW5zOmplbmtpbnMueGF4aXM="}}}
+{"auths":{"https://index.docker.io/v1/":{"username":"","password":"].",
+"email":"Markus.plattner@.","auth":"="}}}
 
 This should be the string data for data named data for key named **getsecret** for the values file
 for the current environment. Should be set before deployments in each value file. By default it is set to the Jenkins repo 
