@@ -1,7 +1,0 @@
-{{- define "dbint.yaml" -}}
-subsets:
- - addresses:
-     - ip: 10.17.3.201
-   ports:
-     - port: 3306
-{{- end -}}

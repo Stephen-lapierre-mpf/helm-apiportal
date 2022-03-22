@@ -1,7 +1,0 @@
-{{- define "dbprod.yaml" -}}
-subsets:
- - addresses:
-     - ip: 10.21.0.203
-   ports:
-     - port: 3306
-{{- end -}}
