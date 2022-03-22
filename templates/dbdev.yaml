@@ -1,7 +1,0 @@
-{{- define "dbdev.yaml" -}}
-subsets:
- - addresses:
-     - ip: 10.17.52.37
-   ports:
-     - port: 3306
-{{- end -}}
